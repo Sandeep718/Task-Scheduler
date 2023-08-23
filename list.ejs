@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body>
+    <%- include("header") -%>
+    <div class="box" id="heading"> 
+    <h1> <%= kind %>  </h1>
+</div>
+    
+<div class="box">
+        <% for( i=0; i < n1.length ;i++){ %>
+            <div class="item">
+                <input type="checkbox" >
+                <p><%= n1[i] %></p> 
+            </div>
+            
+       <% } %>
+    <form class="item"  action="/" method="post">
+        <input type="text" name="newItem"  placeholder="new Item"   autocomplete="off">
+        <input type="time" name="timeInput" placeholder="Time">
+        <button type="submit" name="list" value=<%=kind %>>+</button>
+    </form> 
+</div>
+    </body>
+</body>
+<%- include("footer") -%>
+</html>
